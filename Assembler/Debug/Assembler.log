@@ -1,9 +1,3 @@
-﻿  Assem.cpp
-c:\users\arjun\onedrive\documents\visual studio 2015\projects\assembler\assembler\instruction.h(121): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Compiling...
-  Assembler.cpp
-c:\users\arjun\onedrive\documents\visual studio 2015\projects\assembler\assembler\instruction.h(121): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Assembler.vcxproj -> C:\Users\arjun\onedrive\documents\visual studio 2015\Projects\Assembler\Debug\Assembler.exe
-  Assembler.vcxproj -> C:\Users\arjun\onedrive\documents\visual studio 2015\Projects\Assembler\Debug\Assembler.pdb (Full PDB)
+﻿  Emulator.cpp
+  Assembler.vcxproj -> C:\Users\arjun\OneDrive\Documents\Visual Studio 2015\Projects\Assembler\Debug\Assembler.exe
+  Assembler.vcxproj -> C:\Users\arjun\OneDrive\Documents\Visual Studio 2015\Projects\Assembler\Debug\Assembler.pdb (Full PDB)

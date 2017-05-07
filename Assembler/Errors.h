@@ -21,6 +21,9 @@ public:
     // Displays the collected error message.
     static void DisplayErrors( );
 
+	// Returns rue if no error
+	static bool IsNoErrors();
+
 private:
 
     static vector<string> m_ErrorMsgs;

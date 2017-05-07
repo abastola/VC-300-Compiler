@@ -3,8 +3,6 @@
 //
 #pragma once
 
-
-
 // This class is our symbol table.
 class SymbolTable {
 
@@ -19,10 +17,10 @@ public:
     void AddSymbol( string &a_symbol, int a_loc );
 
     // Display the symbol table.
-    void DisplaySymbolTable( ){ cout << "DisplaySymbolTable not Implemented" << endl;};
+    void DisplaySymbolTable( );
 
     // Lookup a symbol in the symbol table.
-    bool LookupSymbol( string &a_symbol, int &a_loc ) { cout << "LookupSymbol not Implemented" << endl; };
+    bool LookupSymbol( string &a_symbol, int &a_loc );
 
 private:
 

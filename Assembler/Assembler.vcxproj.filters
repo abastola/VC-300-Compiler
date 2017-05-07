@@ -60,5 +60,11 @@
     <ClCompile Include="Assem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Errors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Emulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

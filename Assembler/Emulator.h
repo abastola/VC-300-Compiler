@@ -1,6 +1,3 @@
-//
-//		Emulator class - supports the emulation of VC3600 programs
-//
 #ifndef _EMULATOR_H      // UNIX way of preventing multiple inclusions.
 #define _EMULATOR_H
 

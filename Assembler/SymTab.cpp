@@ -31,3 +31,24 @@ void SymbolTable::AddSymbol( string &a_symbol, int a_loc )
     // Record a the  location in the symbol table.
     m_symbolTable[a_symbol] = a_loc;
 }
+
+void SymbolTable::DisplaySymbolTable() {
+	cout << "Symbol Table" << endl;
+	cout << "------------------------------------------------------------" << endl;
+	int symbolNumber_int=0;
+	cout << "Symbol#" << "\t" << "Symbol" <<  "\t" << "Location" << endl;
+	for (auto const& x : m_symbolTable) {
+		cout << symbolNumber_int << " \t " << x.first << " \t " << x.second << endl;
+		symbolNumber_int++;
+	}
+	cout << "------------------------------------------------------------" << endl;
+
+}
+
+bool SymbolTable::LookupSymbol(string &a_symbol, int &a_loc) {
+	if (m_symbolTable.find(a_symbol) == m_symbolTable.end()) {
+		return false;
+	}
+	a_loc = m_symbolTable[a_symbol];
+	return true;
+}

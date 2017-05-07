@@ -150,7 +150,6 @@ public:
 			m_IsNumericOperand = false;
 		}
 
-		cout << m_Label << " " << m_OpCode << " " << m_Operand << endl;
 		// Compare it with the OpCode and return what type of instruction it is
 		return m_type;
 	};
@@ -172,18 +171,42 @@ public:
 
 		return m_Label;
 	};
+
 	// To determine if a label is blank.
 	inline bool isLabel() {
 
 		return !m_Label.empty();
 	};
 
+	inline bool IsNumeric() {
+		return m_IsNumericOperand;
+	}
 
+	inline int GetNumericValue() {
+		return m_OperandValue;
+	}
+
+	inline string GetInstruction() {
+		return m_instruction;
+	}
+
+	inline string GetOpCode() {
+		return m_OpCode;
+	}
+	inline int GetOpCodeValue() {
+		return m_NumOpCode;
+	}
+	inline int GetOprandValue() {
+		return m_OperandValue;
+	}
+	inline string GetOperand() {
+		return m_Operand;
+	}
 private:
 
 
 	// The elemements of a instruction
-	string m_Label;            // The label.
+	string m_Label;        // The label.
 	string m_OpCode;       // The symbolic op code.
 	string m_Operand;      // The operand.
 

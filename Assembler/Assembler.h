@@ -18,15 +18,16 @@ public:
 
     // Pass I - establish the locations of the symbols
     void PassI( );
-
+	
     // Pass II - generate a translation
-    void PassII( ) { cout << "PassII not Implemented" << endl; };;
+    void PassII( );
+
 
     // Display the symbols in the symbol table.
     void DisplaySymbolTable() { m_symtab.DisplaySymbolTable(); }
     
     // Run emulator on the translation.
-    void RunProgramInEmulator() { cout << "RunProgramInEmulator not Implemented" << endl; };
+    void RunProgramInEmulator();
 
 private:
 
@@ -34,5 +35,6 @@ private:
     SymbolTable m_symtab; // Symbol table object
     Instruction m_inst;	    // Instruction object
     emulator m_emul;        // Emulator object
+	int value_int;          //Value of the Calculation
 };
 
