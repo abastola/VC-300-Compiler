@@ -23,6 +23,26 @@ public:
 		ST_Invalid
 	};
 	// Parse the Instruction.
+
+	/**/
+	/*
+	InstructionType ParseInstruction(string &a_buff);
+	NAME
+		ParseInstruction(string &a_buff)
+	SYNOPSIS
+		InstructionType ParseInstruction(string &a_buff)
+		a_buff -> Instruction (a line in a source line)
+	DESCRIPTION
+		Parses the string and determines OpCode, Openrand and Label
+	RETURNS
+		Type of the Instruction
+	AUTHOR
+		Arjun Bastola
+	DATE
+		3:08 PM 5/7/2017
+	*/
+	/**/
+
 	InstructionType ParseInstruction(string &a_buff) {
 		
 		//Clear All Values
@@ -154,7 +174,25 @@ public:
 		return m_type;
 	};
 
-	// Compute the location of the next instruction.
+	/**/
+	/*
+	int LocationNextInstruction(int a_loc)
+	NAME
+		LocationNextInstruction(int a_loc)
+	SYNOPSIS
+		int LocationNextInstruction(int a_loc)
+		a_loc -> Current Location
+	DESCRIPTION
+		Determines next Location
+	RETURNS
+		Location of next instruction
+	AUTHOR
+		Arjun Bastola
+	DATE
+		3:08 PM 5/7/2017
+	*/
+	/**/
+
 	int LocationNextInstruction(int a_loc) {
 		// If DS or ORG, return a_lock plus Operand Value
 		if (m_OpCode == "ORG" || m_OpCode == "DS"){
@@ -206,27 +244,19 @@ private:
 
 
 	// The elemements of a instruction
-	string m_Label;        // The label.
-	string m_OpCode;       // The symbolic op code.
-	string m_Operand;      // The operand.
-
-	// VIC ADD DUCK ; Quack Quack
-	//first - get rid of comments - find_first_of
-	//second - isstringstream
-	//string a, b, c, d
-	//iss >> a (vic) >> b (add) >> c (duck) >> d (nothing)
-	// if(d) {someone messed up; we should only have d}
-	// find opcode and what time of instruction it is
+	string m_Label;            // The label.
+	string m_OpCode;           // The symbolic op code.
+	string m_Operand;          // The operand.
 
 
-	string m_instruction;    // The original instruction.
+	string m_instruction;      // The original instruction.
 
 	// Derived values.
-	int m_NumOpCode;     // The numerical value of the op code.
-	InstructionType m_type; // The type of instruction.
+	int m_NumOpCode;           // The numerical value of the op code.
+	InstructionType m_type;    // The type of instruction.
 
-	bool m_IsNumericOperand;// == true if the operand is numeric.
-	int m_OperandValue;   // The value of the operand if it is numeric.
+	bool m_IsNumericOperand;   // true if the operand is numeric.
+	int m_OperandValue;        // The value of the operand if it is numeric.
 
 	vector<string> OperationCodes_arr = { "ADD", "SUB", "MULT", "DIV", "LOAD", "STORE", "READ", "WRITE", "B", "BM", "BZ", "BP", "HALT" };
 	vector<string> AssemblerInstrcutions_arr = {"DC", "DS", "ORG", "END" };

@@ -5,8 +5,29 @@
 #include "Assembler.h"
 #include "Errors.h"
 
-// Constructor for the assembler.  Note: we are passing argc and argv to the file access constructor.
-// See main program.
+
+/**/
+/*
+Assembler::Assembler(int argc, char *argv[])
+NAME
+	Assembler::Assembler(int argc, char *argv[])
+SYNOPSIS
+	Assembler::Assembler(int argc, char *argv[])
+	argc		-->			Number of Arguments
+	argv		-->			Commandline Arguments
+
+DESCRIPTION
+	Constructor of Assembler Class
+RETURNS
+	VOID
+AUTHOR
+	Arjun Bastola
+DATE
+	3:08 PM 5/7/2017
+*/
+/**/
+
+
 Assembler::Assembler(int argc, char *argv[])
 	: m_facc(argc, argv)
 {
@@ -17,6 +38,25 @@ Assembler::~Assembler()
 {
 }
 // Pass I establishes the location of the labels.  You will write better function comments according to the coding standards.
+
+/**/
+/*
+void Assembler::PassI()
+NAME
+	Assembler::PassI() - Pass I of Instructions to Create Symbol Table
+SYNOPSIS
+	void Assembler::PassI()
+DESCRIPTION
+	Parses Instruction and adds them to Symbol Table
+RETURNS
+	VOID
+AUTHOR
+	Arjun Bastola
+DATE
+	3:08 PM 5/7/2017
+	*/
+/**/
+
 void Assembler::PassI()
 {
 	int loc = 0;        // Tracks the location of the instructions to be generated.
@@ -59,6 +99,24 @@ void Assembler::PassI()
 		loc = m_inst.LocationNextInstruction(loc);
 	}
 }
+
+/**/
+/*
+void Assembler::PassII()
+NAME
+	Assembler::PassII() - Pass II of Instructions; Translates to Assembler Code
+SYNOPSIS
+	void Assembler::PassII()
+DESCRIPTION
+	Translates Insyructions to Machine Level Code
+RETURNS
+	VOID
+AUTHOR
+	Arjun Bastola
+DATE
+	3:08 PM 5/7/2017
+*/
+/**/
 
 void Assembler::PassII() {
 	int loc = 0;        // Tracks the location of the instructions to be generated.
@@ -189,6 +247,23 @@ void Assembler::PassII() {
 
 	} while (1);
 }
+/**/
+/*
+void Assembler::RunProgramInEmulator()
+NAME
+	Assembler::RunProgramInEmulator()
+SYNOPSIS
+	void Assembler::RunProgramInEmulator()
+DESCRIPTION
+	Runs Emulator for the Parsed Assembly Code
+RETURNS
+	VOID
+AUTHOR
+	Arjun Bastola
+DATE
+	3:08 PM 5/7/2017
+*/
+/**/
 
 void Assembler::RunProgramInEmulator() {
 	if (Errors::IsNoErrors) {

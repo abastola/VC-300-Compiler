@@ -1,6 +1,28 @@
 #include "stdafx.h"
 #include "Emulator.h"
 
+
+/**/
+/*
+bool emulator::insertMemory(int a_location, int a_contents)
+NAME
+	emulator::insertMemory(int a_location, int a_contents)
+SYNOPSIS
+	bool emulator::insertMemory(int a_location, int a_contents)
+	a_location -> Location of Machine Languge
+	a_contents _> Content of Machine Language
+DESCRIPTION
+	Inserts the contents to the memory
+RETURNS
+	Returns if successful insertion, false if the insertion fails
+AUTHOR
+	Arjun Bastola
+DATE
+	3:08 PM 5/7/2017
+*/
+/**/
+
+
 bool emulator::insertMemory(int a_location, int a_contents) {
 	if (a_location >= MEMSZ) {
 		return false;
@@ -10,6 +32,24 @@ bool emulator::insertMemory(int a_location, int a_contents) {
 		return true;
 	}
 }
+
+/**/
+/*
+bool emulator::runProgram()
+NAME
+	emulator::runProgram()
+SYNOPSIS
+	bool emulator::runProgram()
+DESCRIPTION
+	Runs the Emulator and does necessary operations for 13 operator
+RETURNS
+	Returns if successful run, false if run fails
+AUTHOR
+	Arjun Bastola
+DATE
+	3:08 PM 5/7/2017
+*/
+/**/
 
 bool emulator::runProgram() {
 	cout << "Results from emulating program: " << endl;

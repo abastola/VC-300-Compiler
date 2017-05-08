@@ -1,3 +1,11 @@
-﻿  Emulator.cpp
-  Assembler.vcxproj -> C:\Users\arjun\OneDrive\Documents\Visual Studio 2015\Projects\Assembler\Debug\Assembler.exe
-  Assembler.vcxproj -> C:\Users\arjun\OneDrive\Documents\Visual Studio 2015\Projects\Assembler\Debug\Assembler.pdb (Full PDB)
+﻿  SymTab.cpp
+  Errors.cpp
+  Emulator.cpp
+  Assembler.cpp
+c:\users\arjun\onedrive\documents\visual studio 2015\projects\assembler\assembler\instruction.h(141): warning C4018: '<': signed/unsigned mismatch
+c:\users\arjun\onedrive\documents\visual studio 2015\projects\assembler\assembler\assembler.cpp(269): warning C4551: function call missing argument list
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Assem.cpp
+  Assembler.vcxproj -> C:\Users\arjun\onedrive\documents\visual studio 2015\Projects\Assembler\Debug\Assembler.exe
+  Assembler.vcxproj -> C:\Users\arjun\onedrive\documents\visual studio 2015\Projects\Assembler\Debug\Assembler.pdb (Full PDB)
